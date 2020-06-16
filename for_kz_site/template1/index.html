@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>$SITE_NAME$</title>
+    <link rel="stylesheet" href="src\css\normalize.css">
+    <link rel="stylesheet" href="src\css\style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body class=".body">
+    <h1 class="visually-hidden">$SITE_NAME$</h1>
+    <div class="wrapper">
+        <header class="header">
+            <div class="htsu">
+                <section class="search">
+                    <h2 class="visually-hidden">Пошук по сайту</h2>
+                    <form class="search--form" action="http:\\www.kzschool.at.ua" method="post"></form>
+                <label>    
+                <span class="visually-hidden">Поле пошуку по сайту:</span>
+                <input type="search" name="search" id="top_search" size="18">
+                <input type="submit" value="" title="Пошук по сайту" id="search_button">
+            </label>
+                    </form>
+                </section>
+
+                <section class="userControl">
+                    <h2 class="visually-hidden">Вход, реєстрація, управление</h2>
+                    <ul class="userControl--list">
+                        <li class="one">
+                            <?if($USER_LOGGED_IN$)?>
+                                <a href="$PERSONAL_PAGE_LINK$" class="profile-link" title="Мій профіль">
+                                    <i class="fa fa-user" aria-hidden="true"></i> Мій профіль</a>
+                                <?else?>
+                                    <a href="$REGISTER_LINK$" class="profile-reg" title="Реєстрація">
+                                        <i class="fa fa-user-plus" aria-hidden="true"></i> Реєстрація
+                                    </a>
+                                    <?endif?>
+                        </li>
+                        <li class="two">
+                            <?if($USER_LOGGED_IN$)?>
+                                <a href="$LOGOUT_LINK$" class="profile-exit" title="
+                                Вихід">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i> Вихід
+                                </a>
+                                <?else?>
+                                    <a href="$LOGIN_LINK$" class="profile-login">
+                                        <i class="fa fa-sign-in" aria-hidden="true"></i> Вхід
+                                    </a>
+                                    <?endif?>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <article class="school--info">
+                <h2 class="visually-hidden">Інформація про навчальний заклад</h2>
+                <p class="school--info--gerb">
+                    <a href="/" title="?" title="Герб Комиш-Зорянської ЗОШ І-ІІІ ступенів">
+                        <img src="src\svg\gerb.svg" width="220px" alt="Герб Комиш-Зорянської ЗОШ І-ІІІ ступенів">
+                    </a>
+                </p>
+                <div class="hmgtlc">
+                    <h2 class="school--info--title">Комиш-Зорянська загальноосвітня школа І-ІІІ ступнів</h2>
+                    <h3 class="visually-hidden">Адреса закладу освіти</h3>
+                    <ul class="school--info--list">
+                        <li>Запорізька область</li>
+                        <li>Більмацький район</li>
+                        <li>Комиш-Зорянська селищна рада</li>
+                        <li>смт. Комиш-Зоря</li>
+                        <li>вул. Вокзальна 7
+                            <a href="/" title="Знайти нас на карті (Google map)"><i class="fa fa-map-marker" aria-hidden="true"></i> <span class="visually-hidden">Знайти нас на карті (Google map)</span></a>
+                        </li>
+                        <li><br></li>
+                    </ul>
+                    <h3 class="visually-hidden">Контактна інформація закладу освіти</h3>
+                    <ul class="school--info--contacts">
+                        <li class="school--info--contacts--phone"><i class="fa fa-phone-square" aria-hidden="true"></i> +380 00 00 00 000</li>
+                        <li class="school--info--contacts--email"><a href="mailto:kzorzosh@gmail.com" title="Звязок з допомогою електронної пошти"><i class="fa fa-envelope" aria-hidden="true"></i> kzorzosh@gmail.com</a></li>
+                        <li class="school--info--contacts--facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i> facebook</li>
+                    </ul>
+                    <ul class="school--info--links">
+                        <li>
+                            <a href="/"><img src="src/png/calendar.png" width="30px"><br>Розклад уроків</a>
+                        </li>
+                        <li>
+                            <a href="/"><img src="src/png/calendar.png" width="30px"><br>Розклад уроків</a>
+                        </li>
+                        <li>
+                            <a href="/"><img src="src/png/calendar.png" width="30px"><br>Розклад уроків</a>
+                        </li>
+                        <li>
+                            <a href="/"><img src="src/png/calendar.png" width="30px"><br>Розклад уроків</a>
+                        </li>
+                        <li>
+                            <a href="/"><img src="src/png/calendar.png" width="30px"><br>Розклад уроків</a>
+                        </li>
+                        <li>
+                            <a href="/"><img src="src/png/calendar.png" width="30px"><br>Розклад уроків</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </article>
+            <div class="rainbow"></div>
+
+            <nav class="navigation">
+                <h2 class="visually-hidden">Головне меню сайту</h2>
+                <ul class="navigation--main">
+                    <li class="kzschool active">
+                        <a href="/" title="?"><i class="fa fa-home" aria-hidden="true"></i><span class="break"><br></span>Головна
+                            <span class="news info"><hr>новини школи</span></a>
+                    </li>
+                    <li class="school" onclick="menuclick('.school--nav'); ">
+                        <a href="#" title="?"><i class="fa fa-university" aria-hidden="true"></i><span class="break"><br></span>
+                            Про школу
+                            <span class="info"><hr>загальна інформація</span></a>
+                        <div class="school--nav inner--nav">
+                            <ul>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="docs" onclick="menuclick('.docs--nav'); ">
+                        <a href="#" title="?"><i class="fa fa-file-text-o" aria-hidden="true"></i><span class="break"><br></span>
+                            Документи 
+                            <span class="info"><hr>публічна інформація</span></a>
+
+                        <div class="docs--nav inner--nav">
+                            <ul>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="teacher" onclick="menuclick('.teacher--nav'); ">
+                        <a href="#" title="?"><i class="fa fa-users" aria-hidden="true"></i><span class="break"><br></span>
+                            Вчителям
+                            <span class="info"><hr>інформація для педагогів</span></a>
+                        <div class="teacher--nav inner--nav">
+                            <ul>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="childs" onclick="menuclick('.childs--nav'); ">
+                        <a href="#" title="?"><i class="fa fa-child" aria-hidden="true"></i><span class="break"><br></span>
+                            Учням
+                            <span class="info"><hr>підручники, правила, навчальні матеріали </span></a>
+                        <div class="childs--nav inner--nav">
+                            <ul>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="perrent" onclick="menuclick('.perrent--nav'); ">
+                        <a href="#" title="?"><i class="fa fa-users" aria-hidden="true"></i><span class="break"><br></span></span>
+                            Батькам
+                            <span class="info"><hr>інформація для батьків</span></a>
+                        <div class="perrent--nav inner--nav">
+                            <ul>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="works" onclick="menuclick('.works--nav'); ">
+                        <a href="#" title="?"><i class="fa fa-database" aria-hidden="true"></i><span class="break"><br></span>
+                            Підрозділи школи
+                            <span class="info"><hr>бібліотека, психолог</span></a>
+                        <div class="works--nav inner--nav">
+                            <ul>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="zno">
+                        <a href="/" title="?"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span class="break"><br></span>
+                            ЗНО 2020
+                            <span class="info"><hr>в допомогу 11 класу</span></a>
+                    </li>
+                    <li class="links">
+                        <a href="/" title="?"><i class="fa fa-link" aria-hidden="true"></i><span class="break"><br></span>
+                            Цікаві посилання
+                            <span class="info"><hr>блоги, довідники, ресурси</span></a>
+                    </li>
+                    <li class="ather" onclick="menuclick('.ather--nav'); ">
+                        <a title="?"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="break"><br></span>
+                            Інше
+                            <span class="info"><hr>додаткова інформація</span></a>
+
+                        <div class="ather--nav inner--nav">
+                            <ul>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                                <li><a href="/" title="?"> test</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                </ul>
+
+                <label class="mobilemenu">
+                        <button class="showmenu" onclick="showmenu()" style="display: none;"
+                        title="Показати головну навігацію по сайту"><span class="visually-hidden">Показати головну навігацію по сайту</span></button>
+                        <img src="src/png/menu.png" width="50px" height="50px" alt="Показати головну навігацію по сайту">
+                    </label>
+                <label class="mobilemenu_close">
+                        <button class="showmenu" onclick="closemenu()" style="display: none;" 
+                        title="Сховати головну навігацію по сайту"><span class="visually-hidden">Сховати головну навігацію по сайту</span></button>
+                        <img src="src/svg/close.svg" width="50px" height="50px" alt="Сховати головну навігацію по сайту">
+                </label>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="slideshow" height="400px;">
+                <div>
+                    <img src="src\img\1.jpg">
+                    <img src="src\img\4.jpg">
+                    <img src="src\img\8.jpg">
+                </div>
+                <div>
+                    <img src="src\img\4.jpg">
+                    <img src="src\img\1.jpg">
+                    <img src="src\img\9.jpg">
+                </div>
+                <div>
+                    <img src="src\img\6.jpg">
+                    <img src="src\img\4.jpg">
+                    <img src="src\img\8.jpg">
+                </div>
+                <div>
+                    <img src="src\img\8.jpg">
+                    <img src="src\img\4.jpg">
+                    <img src="src\img\1.jpg">
+                </div>
+                <div>
+                    <img src="src\img\9.jpg">
+                    <img src="src\img\4.jpg">
+                    <img src="src\img\1.jpg">
+                </div>
+            </section>
+
+            <div class="rainbow"></div>
+
+            <section class="annons">
+                <h2>Аннонси подій шкільного життя:</h2>
+                <ul class="anons--list">
+                    <li>
+                        <time datetime="2019-10-10" class="icon">
+                            <em>Saturday</em>
+                            <strong>Жовтень</strong>
+                            <span>10</span>
+                        </time>
+                        <span>Зміст аннонсу !............... ...................... .............. </span>
+                    </li>
+                    <li>
+                        <time datetime="2014-09-20" class="icon">
+                            <em>Saturday</em>
+                            <strong>September</strong>
+                            <span>20</span>
+                            </time>
+                        <span>Зміст аннонсу !............... ...................... .............. </span>
+                    </li>
+                    <li>
+                        <time datetime="2014-09-20" class="icon">
+                            <em>Saturday</em>
+                            <strong>September</strong>
+                            <span>20</span>
+                        </time>
+                        <span>Зміст аннонсу !............... ...................... .............. </span>
+                    </li>
+                </ul>  
+            </section>
+            <div class="rainbow"></div>
+
+            <section class="frendslinks">
+                <h2><i class="fa fa-address-book" aria-hidden="true"></i> Наші друзі</h2>
+                <ul class="frendslinks--list">
+                    <li>
+                        <a href="http://kz-osvita.at.ua/" title="Відділ освіти виконавчого комітету Комиш-Зорянської селищної ради">
+                            <img src="src\png\viddilosv.png" alt="?" width="75" height="">Комиш-Зорянський відділ освіти
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="?"><img src="" alt="?" width="" height=""> Комиш-Зорянський відділ освіти
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="?"><img src="" alt="?" width="" height=""> Комиш-Зорянський відділ освіти
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="?"><img src="" alt="?" width="" height=""> Комиш-Зорянський відділ освіти
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="?"><img src="" alt="?" width="" height=""> Комиш-Зорянський відділ освіти
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="studysupport">
+                <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> Навчальні ресурси та посилання:</h2>
+                <div class="tabs">
+                    <!-- Main class-->
+                    <input type="radio" name="tab" id="tabMain" title="?" checked />
+                    <label class="tab-label no-select" for="tabMain" title="?" nth="1">Загальні</label>
+                    <section id="tab-content1" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+                    <!-- 1 class-->
+                    <input type="radio" name="tab" id="tab_1" title="?" />
+                    <label class="tab-label no-select" for="tab_1" title="?" nth="2">1 клас</label>
+                    <section id="tab-content2" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+                    <!-- 2 class-->
+                    <input type="radio" name="tab" id="tab_2" title="?" />
+                    <label class="tab-label no-select" for="tab_2" title="?" nth="3">2 клас</label>
+                    <section id="tab-content3" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+
+                    <!-- 3 class-->
+                    <input type="radio" name="tab" id="tab_3" title="?" />
+                    <label class="tab-label no-select" for="tab_3" title="?" nth="4">3 клас</label>
+                    <section id="tab-content4" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+
+                    <!-- 4 class-->
+                    <input type="radio" name="tab" id="tab_4" title="?" />
+                    <label class="tab-label no-select" for="tab_4" title="?" nth="5">4 клас</label>
+                    <section id="tab-content5" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+
+                    <!-- 5 class-->
+                    <input type="radio" name="tab" id="tab_5" title="?" />
+                    <label class="tab-label no-select" for="tab_5" title="?" nth="6">5 клас</label>
+                    <section id="tab-content6" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+
+                    <!-- 6 class-->
+                    <input type="radio" name="tab" id="tab_6" title="?" />
+                    <label class="tab-label no-select" for="tab_6" title="?" nth="7">6 клас</label>
+                    <section id="tab-content7" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+
+                    <!-- 7 class-->
+                    <input type="radio" name="tab" id="tab_7" title="?" />
+                    <label class="tab-label no-select" for="tab_7" title="?" nth="8">7 клас</label>
+                    <section id="tab-content8" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+
+                    <!-- 8 class-->
+                    <input type="radio" name="tab" id="tab_8" title="?" />
+                    <label class="tab-label no-select" for="tab_8" title="?" nth="9">8 клас</label>
+                    <section id="tab-content9" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+
+                    <!-- 9 class-->
+                    <input type="radio" name="tab" id="tab_9" title="?" />
+                    <label class="tab-label no-select" for="tab_9" title="?" nth="10">9 клас</label>
+                    <section id="tab-content10" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+                    <!-- 10 class-->
+                    <input type="radio" name="tab" id="tab_10" title="?" />
+                    <label class="tab-label no-select" for="tab_10" title="?" nth="11">10 клас</label>
+                    <section id="tab-content11" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+                    <!-- 11 class-->
+                    <input type="radio" name="tab" id="tab_11" title="?" />
+                    <label class="tab-label no-select" for="tab_11" title="?" nth="12">11 клас</label>
+                    <section id="tab-content12" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+                    <!-- Ather -->
+                    <input type="radio" name="tab" id="tab_Ather" title="?" />
+                    <label class="tab-label no-select" for="tab_Ather" title="?" nth="13">Інше</label>
+                    <section id="tab-content13" class="tab-item">
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+
+
+                        <ul class="studysupport--list">
+                            <li class="studysupport--list--title">
+                                <h4>Заголовок</h4>
+                            </li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                            <li><a href="/" title="?">посилання</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+        <div class="rainbow"></div>
+        <div class="contentsblock">
+            <div class="leftblocks">
+                <p>
+                    <h3>block name</h3>
+                    content
+                </p>
+                <p>
+                    <h3>block name</h3>
+                    content
+                </p>
+                <p>
+                    <h3>block name</h3>
+                    content
+                </p>
+                <p>
+                    <h3>block name</h3>
+                    content
+                </p>
+            </div>
+
+            <section class="news">
+                <h2><i class="fa fa-newspaper-o" aria-hidden="true"></i> Новини школи</h2>
+                <article class="news--item">
+                    <header>
+                        <h3 class="news--item--title">
+                            1
+                        </h3>
+                        <time class="news--item--date">12.09.2019</time>
+                    </header>
+                    <main>
+                        dffff
+                    </main>
+                    <footer>
+                        <span class="news--item--category">Категорія: </span>
+                        <span class="news--item--autor">Автор: </span>
+                    </footer>
+                </article>
+
+                <article class="news--item">
+                    <header>
+                        <h3 class="news--item--title">
+                            1
+                        </h3>
+                        <time class="news--item--date">12.09.2019</time>
+                    </header>
+                    <main>
+                        dffff
+                    </main>
+                    <footer>
+                        <span class="news--item--category">Категорія: </span>
+                        <span class="news--item--autor">Автор: </span>
+                    </footer>
+                </article>
+            </section>
+        </div>
+        </main>
+        <div class="rainbow"></div>
+        <footer class="footer">
+            <section class="footer--info">
+                <img src="" alt="Комиш-Зорянська школа І-ІІІ ступенів" width="320px">
+                <p>
+                    Вітаємо вас на сторінках сайту нашої школи! <br> На його сторінках ви можете знайти актуальну інформацію про школу та навчальний процес, документи, новини школи, навчальні матеріали та посилання на сторонні ресурси, фото з життя школи,
+                    матеріали з підготовки до ЗНО...
+                </p>
+
+            </section>
+            <section class="frontend--info">
+                <b>смт. Комиш-Зоря 2015-2019</b>
+                <p class="autor">Розробка та підтримка сайту: <a href="/" title="?">Шегда М.М.</a></p>
+            </section>
+        </footer>
+    </div>
+    </div>
+    <script src="src\js\js.js"></script>
+</body>
+
+</html>
