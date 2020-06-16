@@ -1,0 +1,792 @@
+/*------------------------------- start fonts and color system -----------------*/
+
+
+/*
+font-family: 'Pacifico', cursive; =h2-h6
+font-family: 'Roboto Condensed', sans-serif; =text
+https://colorscheme.ru/#1V62htypV00--
+
+Основной Цвет:
+#0C9E26	#1E8530	#067A1B	#4AD662	#78D688
+Вторичный Цвет A:
+#1C2A8E	#273077	#0F1A6E	#5A67D0	#808AD0
+Вторичный Цвет B:
+#CECA10	#ADAA27	#A09C08	#EBE751	#EBE883
+
+#E4DBBF
+#DC5B21
+#70AB8F
+#383127
+*/
+
+
+/*------------------------------- end fonts and color system -------------------*/
+
+:root {
+    --h1-color: #067A1B;
+    --text-color: #3d3c3c;
+    --link-color: rgb(6, 43, 211);
+    --a_bg: rgba(70, 219, 150, 0.733);
+    --a_color: #067A1B;;
+
+    --button-text-color: #ffffff;
+    --button-bg-color: #DC5B21;
+
+    --bg-color: #808AD0;
+    --bgwrapper: #E4DBBF;
+    --bgmenu: rgb(240, 224, 6);
+    --colormenu: #A52A2A;
+    --border-color: #DC5B21;
+    --links-color: #DC5B21;
+    --footer-bg-color: #E4DBBF#DC5B21#70AB8F#383127;
+}
+
+
+/*------------------------------- start <custum tegs> ----------------------------*/
+
+*,
+*::before,
+*::after {
+    /*модель росчета розмеров от body*/
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--text-color);
+    background-attachment: fixed;
+    background-color: var(--bg-color);
+    background-image: url("../img/background-body.jpg");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 5px 10px;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 2.5px;
+    color: var(--h1-color);
+}
+
+a,
+a::before,
+a::after {
+    text-decoration: none;
+    border-radius: 2px;
+    color: var(--link-color);
+}
+
+a:hover,
+a:focus{
+    background-color: var(--a_bg);
+    color: var(--a_color);
+}
+nav a:hover,
+nav a:focus,
+.school--info--gerb a:focus,
+.school--info--gerb a:hover{ 
+    background-color: transparent;
+    color: var(--link-color);
+}
+
+/* убрать маркер у  основных списочных елементов */
+
+section ul,
+.school--info ul,
+.navigation ul {
+    list-style: none outside none;
+    list-style-position: inside;
+}
+@media screen and (min-width: 1600px) and (max-width: 2024px) {
+    body {
+        font-size: 40px;
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 240px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+
+/*------------------------------- end <custum tegs> ----------------------------*/
+
+
+/*------------------------------- start <wrapper> ----------------------------*/
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 15px;
+    background-color: var(--bgwrapper);
+    border-radius: 10px;
+    border: var(--border-color) 3px inset;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    /* приклеить футер к дну страницы*/
+    flex: 0 0 auto;
+}
+
+@media screen and (min-width: 240px) and (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+
+/*------------------------------- end <wrapper> ----------------------------*/
+/*------------------------------- start <div search and userControl> ----------------------------*/
+
+.htsu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 30px;
+}
+
+@media screen and (min-width: 140px) and (max-width: 850px) {
+    .htsu {
+        justify-content: center;
+    }
+}
+
+
+/*------------------------------- end <div search and userControl> ----------------------------*/
+/*------------------------------- start <search> ----------------------------*/
+
+.search {
+    margin: 5px 0;
+    text-align: center;
+    padding: 5px 7px;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border-radius: 5px;
+}
+
+
+
+/*------------------------------- end <search> ----------------------------*/
+/*------------------------------- start <userControl> ----------------------------*/
+
+.userControl {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.userControl li {
+    display: inline-block;
+    background-color: var(--button-bg-color);
+    border-radius: 5px;
+    padding: 6px 7px;
+}
+
+.userControl li a {
+    color: var(--button-text-color);
+}
+
+@media screen and (min-width: 140px) and (max-width: 768px) {
+    .userControl li {
+        margin: 0 auto;
+    }
+}
+
+
+/*------------------------------- end <userControl> ----------------------------*/
+
+
+/*------------------------------- start <school_info> ----------------------------*/
+
+.school--info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    font-size: 1.3rem;
+}
+
+.school--info--gerb {
+    flex-grow: 0;
+    flex-basis: 250px;
+}
+
+.hmgtlc {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 360px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.hmgtlc .school--info--title {
+    flex-grow: 2;
+    width: calc(100%-250px);
+    margin-bottom: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    line-height: 1.9rem;
+    text-shadow: 5px 5px 5px var(--border-color), 0 0 1rem var(--h1-color);
+}
+
+.hmgtlc .school--info--contacts {
+    flex-grow: 1;
+    flex-basis: 360px;
+    margin-bottom: 10px;
+    line-height: 1.3rem;
+}
+
+.hmgtlc .school--info--list {
+    flex-grow: 1;
+    flex-basis: 360px;
+    margin-bottom: 5px;
+    line-height: 1.3rem;
+}
+
+.hmgtlc .school--info--links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+    flex-basis: calc(100%-250px);
+    border-radius: 5px;
+    border-color: var(--border-color);
+    border-width: 1px;
+    border-style: inset;
+    text-align: center;
+}
+
+.hmgtlc .school--info--links li {
+    margin: 5px 10px;
+    font-size: 1rem;
+    line-height: 0.8rem;
+}
+
+@media screen and (min-width: 140px) and (max-width: 1100px) {
+    .school--info>* {
+        margin: 5px 5px;
+    }
+    .school--info--gerb {
+        margin: 0 auto;
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .hmgtlc .school--info--list li,
+    .hmgtlc .school--info--contacts li {
+        text-align: center;
+    }
+
+
+	.hmgtlc .school--info--links {
+	  	  flex-wrap: wrap;
+	}
+
+	.hmgtlc .school--info--links li {
+	    flex-basis: 30%;
+	}
+}
+
+
+}
+
+/*------------------------------- end <school_info> ----------------------------*/
+
+/*------------------------------- start <navigation> ----------------------------*/
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* навигация для пк */
+.navigation--main {
+    display: flex;
+    flex-grow: 100;
+    justify-content: center;
+    line-height: 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+/* кнопка+имг для вызова меню из моб. вида */
+.mobilemenu,
+.mobilemenu_close {
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.navigation--main>li {
+    flex-grow: 1;
+    padding: 5px 5px;
+    position: relative;
+    margin: 0 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
+    margin-bottom: 3px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    color: var(--colormenu);
+    background: linear-gradient(to bottom, #b4e391 0%, #61c419 50%, #b4e391 100%);
+    transition: all .4s linear 0s;
+}
+.navigation--main li .info {
+    font-size: 0.6rem;
+    line-height: 0.5rem;
+}
+.navigation--main li a {
+    color: var(--colormenu);
+}
+.navigation--main li .break {
+    display: block;
+    line-height: 0px;
+}
+
+/* inner div in li */
+.inner--nav {
+    display: none;
+    min-width: 240px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #b4e391 0%, #61c419 50%, #b4e391 100%);
+    border: 2px solid rgb(64, 165, 5);
+    position: absolute;
+    z-index: 10;
+    left: -60px;
+}
+.inner--nav ul {
+    padding: 0;
+}
+.inner--nav ul li {
+    width: 100%;
+    padding-left: 15px;
+    text-align: left;
+    font-size: 1.3rem;
+    line-height: 19px;
+    list-style: circle;
+    list-style-position: inside;
+}
+.inner--nav ul li:hover {
+    background: #009933;
+    background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 28%, #f8b500 60%, #fbdf93 100%);
+    border-color: #026824;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 1.3rem;
+}
+.navigation--main li:hover {
+    background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 28%, #f8b500 60%, #fbdf93 100%);
+}
+
+/* роскрытие пунктов меню */
+.school:hover .school--nav,
+.docs:hover .docs--nav,
+.teacher:hover .teacher--nav,
+.childs:hover .childs--nav,
+.perrent:hover .perrent--nav,
+.works:hover .works--nav,
+.ather:hover .ather--nav {
+    display: block;
+}
+@media screen and (min-width: 769px) and (max-width: 1188px) {
+    .navigation--main {
+        flex-wrap: wrap;
+    }
+    
+    .navigation--main li {
+        width: 18%;
+        flex-grow: 1;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .mobilemenu_close,
+    .mobilemenu {
+    	display: none;
+    }
+}
+
+/*мобильный вид меню */
+@media screen and (min-width: 140px) and (max-width: 768px) {
+    /* menu button on right */
+    
+    .navigation {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    /* show button */
+    
+    .mobilemenu img,
+    .mobilemenu_close img {
+        display: block;
+        border-radius: 20px;
+        background-color: var(--button-bg-color);
+    }
+    
+    .mobilemenu {
+        display: inline;
+    }
+    
+    .mobilemenu_close {
+        display: none;
+        position: relative;
+        z-index: 10;
+        top: -40px;
+        right: -5px;
+    }
+    
+    .navigation--main {
+        display: none;
+        flex-direction: column;
+    }
+    
+    .navigation--main li {
+        text-align: left;
+        font-size: 1.3rem;
+        font-weight: 1.3rem;
+    }
+    
+    .navigation--main li .break {
+        display: none;
+    }
+    
+    .info {
+        display: none;
+    }
+    
+    .inner--nav {
+        display: none;
+        min-width: 95%;
+        background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 28%, #f8b500 60%, #fbdf93 100%);
+        border: none;
+        margin: 0 auto;
+        position: static;
+        padding-left: 30px;
+    }
+    /* не роскрытие пунктов меню */
+    
+    .school:hover .school--nav,
+    .docs:hover .docs--nav,
+    .teacher:hover .teacher--nav,
+    .childs:hover .childs--nav,
+    .perrent:hover .perrent--nav,
+    .works:hover .works--nav,
+    .ather:hover .ather--nav {
+        display: none;
+    }
+    /* icons for menu */
+    
+    .navigation--main .school::after,
+    .navigation--main .docs::after,
+    .navigation--main .teacher::after,
+    .navigation--main .childs::after,
+    .navigation--main .perrent::after,
+    .navigation--main .works::after,
+    .navigation--main .ather::after {
+        content: "+";
+        display: block;
+        position: absolute;
+        top: 3px;
+        right: 10px;
+        padding: 5px;
+        border-radius: 30px;
+        font-size: 2rem;
+        background-color: var(--button-bg-color);
+        color: white;
+    }
+}
+
+/*------------------------------- end <navigation> ----------------------------*/
+/*------------------------------- start <slideshow> ----------------------------*/
+.slideshow { 
+    margin: 5px auto; 
+    position: relative; 
+    width: 90%; 
+    padding: 0px; 
+}
+.slideshow > div { 
+    position: relative; 
+    top: auto; 
+    left: 10px; 
+    right: 10px; 
+    bottom: auto; 
+
+   	display: flex;
+   	justify-content: space-between;
+   	align-items: flex-start;
+}
+.slideshow div img{
+	width: 33%;
+	height: auto;
+	box-shadow: 0 0 5px rgba(0,0,0,0.4); 
+}
+@media screen and (min-width: 140px) and (max-width: 600px) {
+	.slideshow{
+		display: none;
+	}
+}
+/*------------------------------- end <slideshow> ----------------------------*/
+/*------------------------------- start <annons> ----------------------------*/
+.anons h2{
+    margin-bottom: 15px;
+}
+.anons--list li{
+    margin: 5px 0;
+}
+.anons--list li span{
+    vertical-align: top;
+}
+/*------------------------------- end <annons> ----------------------------*/
+/*------------------------------- start <frendslinks> ----------------------------*/
+.frendslinks--list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-color: var(--border-color);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 15px;
+}
+.frendslinks--list li {
+    flex-shrink: 1;
+    flex-basis: 150px;
+    align-items: center;
+    font-size: 0.7rem;
+    line-height: 0.6rem;
+}
+.frendslinks--list li a img {
+    display: block;
+    margin: 0 auto;
+}
+/*------------------------------- end <frendslinks> ----------------------------*/
+/*------------------------------- start <studysupport> ----------------------------*/
+
+/* Базовый контейнер табов */
+.studysupport {
+    margin: 10px 0;
+    padding: 10px 0;
+    min-width: 320px;
+    max-width: 100%;
+    padding: 0px;
+}
+.tabs {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--border-color);
+    border-radius: 5px;
+}
+.tabs .tab-item,
+.tabs input {
+    display: none;
+}
+.tabs .tab-item {
+    width: calc(100% - 10px);
+    max-width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    order: 1;
+    background-color: #fff;
+}
+.tabs label {
+    line-height: 0.9rem;
+    min-width: 50px;
+    padding: 0px 20px;
+    justify-content: center;
+    flex-grow: 1;
+
+    text-align: center;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 2px dotted white;
+    cursor: pointer;
+}
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.tabs input:checked+label {
+    border-bottom: 5px solid var(--h1-color);
+    border-top: 5px solid var(--h1-color);
+    border-radius: 23px;
+}
+.tabs input:checked+label+.tab-item {
+    display: block;
+}
+
+/*вид информации в  табе */
+.studysupport--list {
+    margin: 0 auto;
+    min-width: 320px;
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+    padding: 0 5px;
+    list-style-image: url(../svg/link.svg);
+}
+.studysupport--list li {
+    text-align: left;
+}
+.studysupport--list--title {
+    list-style: none;
+}
+
+/*------------------------------- end <studysupport> ----------------------------*/
+.contentsblock{
+	display: flex;
+	justify-content: space-between;
+	margin: 10px auto;
+	flex-wrap: wrap;
+}
+.contentsblock .leftblocks{
+	flex-basis: 240px;
+	flex-grow: 0;
+	margin: 0 10px 0 0;
+}
+.contentsblock .news{
+	flex-grow: 1;
+    flex-basis: calc(100%-273px);
+    min-width: 600px;
+}
+
+@media screen and (min-width: 140px) and (max-width: 640px) {
+	.contentsblock .leftblocks{
+		flex-grow: 1;
+		margin: 0 auto
+	}
+	.contentsblock .news{
+        margin: 0 auto;
+        min-width: 320px;
+	}
+}
+
+/*------------------------------- start <contentsblock> ----------------------------*/
+
+/*------------------------------- end <> ----------------------------*/
+
+/*------------------------------- start <> ----------------------------*/
+
+/*------------------------------- end <> ----------------------------*/
+
+/*------------------------------- start <> ----------------------------*/
+
+/*------------------------------- end <> ----------------------------*/
+
+/*------------------------------- start <> ----------------------------*/
+
+/*------------------------------- end <> ----------------------------*/
+
+/*------------------------------- start <> ----------------------------*/
+
+/*------------------------------- end <> ----------------------------*/
+
+/*------------------------------- start <> ----------------------------*/
+
+/*------------------------------- end <> ----------------------------*/
+
+/* ------------------------------- helping classes -----------------------------*/
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+/*  */
+.rainbow {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+}
+/*вид  data container*/
+time.icon
+{
+    display: inline-block;
+    font-size: 1em; /* change icon size */
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    
+    padding: 5px 0;
+    background-color: #fff;
+    border-radius: 0.6rem;
+    box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+    overflow: hidden;
+}
+/* вид  data */
+time.icon *
+{
+  display: block;
+  width: 100%;
+
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+time.icon strong
+{
+  position: relative;
+  top: 0;
+  padding: 3px 0;
+  color: #fff;
+  background-color: #fd9f1b;
+  border-bottom: 1px dashed #f37302;
+  box-shadow: 0 2px 0 #fd9f1b;
+}
+time.icon em
+{
+  position: relative;
+  bottom: 0.3em;
+  color: #fd9f1b;
+}
+time.icon span
+{
+  font-size: 35px;
+  letter-spacing: -0.05em;
+  padding-top: 13px;
+  color: #2f2f2f;
+}
+
