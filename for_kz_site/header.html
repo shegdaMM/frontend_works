@@ -1,0 +1,114 @@
+        
+        <div class="header__center" style="">
+            <div class="schoolinfo" >
+                <h1 class="schoolinfo__name" >
+                    Комиш-Зорянська загальноосвітня школа І-ІІІ ступенів
+                </h1>
+                <ul class="schoolinfo__address">
+                    <li>Запорізька область</li>
+                    <li>Більмацький район</li>
+                    <li>смт. Комиш-Зоря (71030)</li>
+                    <li>вул. Вокзальна 7
+                        <span class="schoolinfo__address-maplink">
+                            <a href="https://goo.gl/maps/q3WsoJQjKfTH1xRU7">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span class="visually-hidden">(Переглянути на карті)</span>
+                        </a>
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+       
+        <header class="header">
+            <div class="header__top">
+                <div class="header__t-left">
+                    <ul class="menulink">
+                        <li class="menulink__mainPage">
+                            <a href="http://kzschool.at.ua/" title="Головна сторінка">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <span>Головна</span>
+                            </a>
+
+
+                        </li>
+                        <li class="menulink__statistic">
+                            <a href="http://kzschool.at.ua/panel/?a=ustat&u=kzschool&d=2&il=ru&sdc=1" title="Статистика">
+                                <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                <span>Статистика</span>
+                            </a>
+                        </li>
+                        <li class="menulink__search">
+                            <a href="http://kzschool.at.ua/search/?q=" title="Пошук по сайту">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <span>Пошук</span>
+
+                            </a>
+                        </li>
+                    </ul>
+                    <section class="Вітаю Вас">
+                        <h4>Вітаємо вас на сторінках сайту школи!</h4>
+                    </section>
+                </div>
+                <section class="gerb">
+
+                    <img src="http://kzschool.at.ua/src/svg/gerb.svg" alt="Герб школи" style="max-width: 130px;">
+                    <button class="navigation-togger" onclick="toggerMenu()">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </section>
+                <div class="header__t-right">
+                    <ul class="person">
+                        <?if($USER_LOGGED_IN$)?>
+                            <li class="person__link" title="Мій профіль">
+                                <a href="$PERSONAL_PAGE_LINK$">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>Мій профіль</span></a>
+                            </li>
+                            <?else?>
+                                <li class="person__registaration">
+                                    <a href="$REGISTER_LINK$" title="Реєстрація">
+                                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                        <span>Реєстрація</span>
+                                    </a>
+                                </li>
+                                <?endif?>
+                                    <?if($USER_LOGGED_IN$)?>
+                                        <li class="person__exit">
+                                            <a href="$LOGOUT_LINK$" title="Вихід">
+                                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                                <span>Вихід</span></a>
+                                        </li>
+                                        <?else?>
+                                            <li class="person__login">
+                                                <a href="$LOGIN_LINK$" title="Вхід">
+                                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                                    <span>Вхід</span>
+                                                </a>
+                                            </li>
+                                            <?endif?>
+                    </ul>
+
+                    <ul class="schoolcontact">
+                        <li class="schoolcontact__phone">
+                            <a href="" title="телефон навчального закладу">
+                                <i class="fa fa-mobile-phone" aria-hidden="true"></i>+380 (6147) 73249</a>
+                        </li>
+                        <li class="schoolcontact__email">
+                            <a href="" title="електронная пошта навчального закладу">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>kzorzosh@gmail.com</a>
+                        </li>
+                        <li class="schoolcontact__facebook">
+                            <a href="" title="наша сторінка в Facebook">
+                                <i class="fa fa-facebook-square" aria-hidden="true"></i>Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        
+</header>   
+
+       
+        
